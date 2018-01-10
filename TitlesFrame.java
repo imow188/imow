@@ -1,22 +1,22 @@
 /*
  * Decompiled with CFR 0_123.
  */
-import java.awt.Component;
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
+
+import javax.swing.*;
+
 /**
  *Метод для выбора параметров TitlesFrame
  */
 
-public class TitlesFrame
+class TitlesFrame
 extends JFrame {
-    public TitlesFrame() {
+    private TitlesFrame() {
         this.initUI();
     }
 
     private void initUI() {
         this.setTitle("\u041a\u0440\u0438\u0432\u044b\u0435 \u0444\u0438\u0433\u0443\u0440\u044b");
-        this.setDefaultCloseOperation(3);
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.add(new TitlesPanel(17));
         this.setSize(350, 350);
         this.setLocationRelativeTo(null);
@@ -25,13 +25,10 @@ extends JFrame {
      * Метод main для запуска программы
      */
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable(){
-
-            @Override
-            public void run() {
+         SwingUtilities.invokeLater(() -> {
                 TitlesFrame ps = new TitlesFrame();
                 ps.setVisible(true);
-            }
+            
         });
     }
 
