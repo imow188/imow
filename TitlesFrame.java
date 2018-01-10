@@ -4,6 +4,9 @@
 import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+/**
+ *Метод для выбора параметров TitlesFrame
+ */
 
 public class TitlesFrame
 extends JFrame {
@@ -18,7 +21,9 @@ extends JFrame {
         this.setSize(350, 350);
         this.setLocationRelativeTo(null);
     }
-
+/**
+     * Метод main для запуска программы
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable(){
 
