@@ -12,12 +12,12 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
-public class ShapeFactory {
+class ShapeFactory {
     public Shape shape;
     public BasicStroke stroke = new BasicStroke(3.0f);
     public Paint paint;
-    public int width = 25;
-    public int height = 25;
+    public final int width = 25;
+    public final int height = 25;
 /**
      * Метод выбора параметров и настройки:
      * shape
@@ -53,7 +53,7 @@ public class ShapeFactory {
                 break;
             }
             case 9: {
-                this.shape = new Arc2D.Double((double)(- this.width) / 2.0, (double)(- this.height) / 2.0, this.width, this.height, 30.0, 300.0, 2);
+                this.shape = new Arc2D.Double((double)(- this.width) / 2.0, (double)(- this.height) / 2.0, this.width, this.height, 30.0, 300.0, Arc2D.PIE);
                 break;
             }
             default: {
