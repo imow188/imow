@@ -24,7 +24,10 @@ implements ActionListener {
     private boolean is_done = true;
     private int start_angle = 0;
     private int shape;
-
+  /**
+     * Метод выбора параметров и запуск анимации
+     * @param _shape локальная переменная
+     */
     public TitlesPanel(int _shape) {
         this.shape = _shape;
         this.animation = new Timer(50, this);
@@ -38,7 +41,9 @@ implements ActionListener {
             this.repaint();
         }
     }
-
+ /** Анимационное движение фигур
+     * @param g наследуемый параметр <em>paintComponent</em>
+     */
     private void doDrawing(Graphics g) {
         this.is_done = false;
         this.g2d = (Graphics2D)g;
