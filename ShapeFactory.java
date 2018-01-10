@@ -18,7 +18,16 @@ public class ShapeFactory {
     public Paint paint;
     public int width = 25;
     public int height = 25;
-
+/**
+     * Метод выбора параметров и настройки:
+     * shape
+     * point
+     * width
+     * height
+     * stroke
+     * paint
+     * @param shape_type установка номера для выбора нужной формы
+     */
     public ShapeFactory(int shape_type) {
         switch (shape_type / 10) {
             case 1: {
@@ -76,7 +85,14 @@ public class ShapeFactory {
             }
         }
     }
-
+  /**
+     * <p>Метод создания формы фигуры:</p>
+     * @param arms количество граней
+     * @param center координаты центра
+     * @param rOuter рассчёт положения точек
+     * @param rInner рассчёт положения точек
+     * @return создание фигуры
+     */
     private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
         double angle = 3.141592653589793 / (double)arms;
         GeneralPath path = new GeneralPath();
